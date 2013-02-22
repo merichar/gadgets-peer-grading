@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
     end
   rescue
     flash[:error] = "Something went wrong."
-    redirect_to sessions_url
+    redirect_to logout_url
   end
 
   def edit
