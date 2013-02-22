@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :review_group
+  has_one :review_group_ownership, :foreign_key => :owner_id, :class_name => 'ReviewGroup'
 
   attr_accessible :andrewid, :username
 

@@ -16,7 +16,6 @@ class UsersController < ApplicationController
     @user.username = params[:user][:username]
     if @user.save
       login_user @user
-      flash[:notice] = "Welcome, foo."
       redirect_to reviews_url
     else
       flash[:error] = "Hold on there, skipper."
