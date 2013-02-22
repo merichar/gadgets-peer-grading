@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reviewer: 
+  presenter: 
+  game: MyString
+  implementation_score: 1
+  degree_of_difficulty_score: 1
+  coolness_score: 1
+  comments: MyText
+
+two:
+  reviewer: 
+  presenter: 
+  game: MyString
+  implementation_score: 1
+  degree_of_difficulty_score: 1
+  coolness_score: 1
+  comments: MyText

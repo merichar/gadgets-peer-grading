@@ -1,8 +1,50 @@
 <h1>Welcome, <%= @user.name %></h1>
 <h2>You are a member of <%= @group.name %></h2>
 
+<h3>Reviews ToDo</h3>
+<% if @user.reviews.incomplete.size == 0 %>
+<div class="none">None! :)</div>
+<% else %>
 <table>
+  <tr>
+    <td>Name</td>
+    <td>AndrewId</td>
+  </tr>
+<% @user.reviews.incomplete.each do |r| %>
+<tr>
+  <td><%= r.presenter.name %></td>
+  <td>(<%= r.presenter.andrewid %>)</td>
+  <td><%= link_to "review", edit_review_url(r) %></t>
+</tr>
+<% end %>
 </table>
+<% end %>
 
-
-
+<h3>Reviews Done</h3>
+<% if @user.reviews.complete.size == 0 %>
+<div class="none">None :-(</div>
+<% else %>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>AndrewID</td>
+    <td>Game Name</td>
+    <td>Implementation</td>
+    <td>Difficulty</td>
+    <td>Coolness</td>
+    <td>Average</td>
+  </tr>
+<% @user.reviews.complete.each do |r| %>
+<tr>
+  <td><%= r.presenter.name %></td>
+  <td>(<%= r.presenter.andrewid %>)</td>
+  <td><%= r.game %></td>
+  <td><%= r.implementation_score %></td>
+  <td><%= r.degree_of_difficulty_score %></td>
+  <td><%= r.coolness_score %></td>
+  <td><%= r.average %></td>
+  <td><%= link_to "edit", edit_review_url(r) %></td>
+</tr>
+<% end %>
+</table>
+<% end %>

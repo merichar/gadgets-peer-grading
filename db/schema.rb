@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222093529) do
+ActiveRecord::Schema.define(:version => 20130222104318) do
 
   create_table "review_groups", :force => true do |t|
     t.integer  "owner_id"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20130222093529) do
   end
 
   add_index "review_groups", ["owner_id"], :name => "index_review_groups_on_owner_id"
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "reviewer_id"
+    t.integer  "presenter_id"
+    t.string   "game"
+    t.integer  "implementation_score"
+    t.integer  "degree_of_difficulty_score"
+    t.integer  "coolness_score"
+    t.text     "comments"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "reviews", ["presenter_id"], :name => "index_reviews_on_presenter_id"
+  add_index "reviews", ["reviewer_id"], :name => "index_reviews_on_reviewer_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"

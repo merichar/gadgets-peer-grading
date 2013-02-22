@@ -4,7 +4,7 @@ PeerGrading::Application.routes.draw do
 
   resources :sessions, :only => [:index]
   resources :users, :only => [:index, :create]
-  resources :reviews
+  resources :reviews, :only => [:index, :edit, :update, :show]
 
   match 'login' => 'sessions#login', :as => 'login', :via => :post
   match 'logout' => 'sessions#logout', :as => 'logout'
