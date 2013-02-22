@@ -1,0 +1,8 @@
+<div id="login">
+  <h1>Login</h1>
+  <%= form_for @user, :url => login_url do |f| %>
+  <label>Grader Alias:</label>
+  <%= f.password_field :username %>
+  <%= f.submit "Login!" %>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<div id="register">
+
+  <h1>Register</h1>
+
+  <%= form_for @user, method: :post, :url => { controller: :users, action: :create}  do |f| %>
+
+  <label>Grading Alias:</label>
+  <%= f.text_field :username %>
+  <% if @user.errors.has_key? :username %>
+  <span class="error"><%= @user.errors[:username].join(", ")%></span>
+  <% end %>
+
+  <label>Andrew ID:</label>
+  <%= f.text_field :andrewid %>@andrew.cmu.edu
+  <% if @user.errors.has_key? :andrewid %>
+  <span class="error"><%= raw @user.errors[:andrewid].join(", ") %></span>
+  <% end %>
+
+  <%= f.submit "Register!" %>
+
+  <% end %>
+
+</div>
