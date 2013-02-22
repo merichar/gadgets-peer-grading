@@ -6,5 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
-User.create(:andrewid => "asdf", :username => "asdf")
-User.create(:andrewid => "fdsa", :username => "fdsa")
+c = User.create(:andrewid => "akuznets", :username => "akuznets")
+d = User.create(:andrewid => "meribyte", :username => "meribyte")
+e = User.create(:andrewid => "hudson", :username => "hudson")
+
+a = User.create(:andrewid => "janej", :username => "janej")
+b = User.create(:andrewid => "mwilliams", :username => "mwilliams")
+
+ReviewGroup.delete_all
+rg_scott = ReviewGroup.create(:name => "Team Scott", :owner => User.find(e))
+rg_meg = ReviewGroup.create(:name => "Team Meg", :owner => User.find(d))
+rg_stacey = ReviewGroup.create(:name => "Team Stacey", :owner => User.find(c))
+
+a.review_group = rg_meg
+b.review_group = rg_stacey
+
+a.save!
+b.save!

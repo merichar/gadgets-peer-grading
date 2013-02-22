@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  belongs_to :review_group
+
   attr_accessible :andrewid, :username
 
   validates_presence_of :andrewid
