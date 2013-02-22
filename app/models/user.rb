@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :reviews, :foreign_key => :reviewer_id
   has_many :self_reviews, :foreign_key => :presenter_id, :class_name => 'Review'
 
-  attr_accessible :andrewid, :username
+  attr_accessible :andrewid, :username, :review_group
 
 
   def ldap_reference
