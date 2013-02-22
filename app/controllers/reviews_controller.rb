@@ -22,10 +22,18 @@ class ReviewsController < ApplicationController
 
   def edit
     @review = Review.find(params[:id])
+    unless @review and @review.reviewer.username == session[:username]
+      redirect_to reviews_url
+    end
+  rescue 
+    redirect_to reviews_url
   end
 
   def update
     @review = Review.find(params[:id])
+    unless @review and @review.reviewer.username == session[:username]
+      redirect_to reviews_url
+    end
     @review.update_attributes(params[:review])
     @review.save!
     redirect_to reviews_url
