@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :username, :message => "is not available. Please select an alternative."
 
-  validate :username_is_not_andrewid
+  validate :username_is_not_andrewid, :on => :update
   
   private
   def username_is_not_andrewid
