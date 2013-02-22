@@ -1,10 +1,18 @@
-#login { width: 200px; 
+nav { text-align: right; }
+
+#flash { margin-bottom: 30px; }
+
+
+#login { width: 150px; 
          float: left;
 	 padding-right: 50px;
+	 margin-top: 50px; 
 	 border-right: 1px solid #cccccc;
+
+input { margin-bottom: 60px; }
        }
 
-#register { float: left; margin-left: 50px; width: 200px; }
+#register { float: left; margin-left: 20px; width: 130px; margin-top: 50px; }
 
 input[type="submit"] { clear: left; float: left; margin: 20px; }
 input[type="text"] { margin-bottom: 10px; }
@@ -13,4 +21,24 @@ label { font-weight: bold; }
 
 h3 { font-weight: bold; margin-top: 30px; }
 
-#review_list input { float: left; clear: left; }
+#review {
+
+textarea,
+h2,
+h3,
+input { float: left; clear: left; margin-top: 0px; margin-bottom: 10px; }
+h2 input { clear: none !important; }
+
+textarea,
+input { border: 1px solid #cccccc; }
+
+textarea, input[type="text"] { width: 300px; padding: 5px; }
+input[type="range"] { width: 250px; }
+
+input[type="submit"] { margin-left: 0px; height: 30px; width: 50px; }
+
+#iValue,
+#dValue,
+#cValue { font-weight: bold; margin-left: 10px; float: left; } 
+
+ }
