@@ -46,7 +46,7 @@ class ReviewsController < ApplicationController
     redirect_to reviews_url
   rescue
     flash[:error] = "Problem saving review"
-    redirect_to reviews_url
+    render 'edit'
   end
 
   def require_authentication

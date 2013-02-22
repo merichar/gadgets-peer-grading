@@ -9,4 +9,9 @@ class Review < ActiveRecord::Base
   def average
     (implementation_score + degree_of_difficulty_score + coolness_score)/3
   end
+
+  validates :implementation_score, :numericality => { :greater_than => 0, :less_than => 11 }
+  validates :degree_of_difficulty_score, :numericality => { :greater_than => 0, :less_than => 11 }
+  validates :coolness_score, :numericality => { :greater_than => 0, :less_than => 11 }
+
 end
