@@ -11,8 +11,15 @@ class SessionsController < ApplicationController
     @user = User.find_by_username(params[:user][:username])
     
     if @user
-      login_user @user
-      redirect_to reviews_url
+      
+      if @user.username == @user.andrewid
+        flash[:error] = "You must register first."
+        redirect_to sessions_url
+      else
+        login_user @user
+        redirect_to reviews_url
+      end
+
     else
       flash[:error] = "That grader alias is not registered."
       redirect_to sessions_url
