@@ -5,10 +5,16 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=350;">
 </head>
 <body>
 
+<% if session[:username] %>
+<nav><%= link_to "[ logout ]", logout_path %></nav>
+<% end %>
 
+<%= image_tag "gadgets.png" %>
+<h1 class="wordmark">Peer Grading App</h1>
 
 <% if flash[:error] and flash[:error] != "" %>
 <div class="flash error"><%= flash[:error] %></div>

@@ -1,21 +1,29 @@
 nav { text-align: right; }
 
-#flash { margin-bottom: 30px; }
+body { width: 580px; }
 
+#review_list { width: 600px; }
+.flash { margin-bottom: 30px; width: 300px; }
 
-#login { width: 150px; 
+.login-windows { margin: 0 auto; width: 400px; float: left; }
+
+h1.wordmark { margin-bottom: 10px; color: black; margin-left: 40px; }
+
+#login { width: 180px; 
          float: left;
-	 padding-right: 50px;
+	 padding-right: 5px;
 	 margin-top: 50px; 
 	 border-right: 1px solid #cccccc;
-
-input { margin-bottom: 60px; }
+label { clear: right; float: left; margin-top: 20px; }
+input { margin-bottom: 60px; width: 150px; clear: left; float: left; padding: 5px; }
        }
 
-#register { float: left; margin-left: 20px; width: 130px; margin-top: 50px; }
+#register { float: left; margin-left: 20px; width: 180px; margin-top: 50px; 
+label { clear: left; float: left; }
+input { width: 150px; clear: left; float: left; padding: 5px; }}
 
-input[type="submit"] { clear: left; float: left; margin: 20px; }
-input[type="text"] { margin-bottom: 10px; }
+input[type="submit"] { clear: left; float: left; margin-top: 20px; width: 180px; }
+input[type="text"] { margin-bottom: 10px;}
 
 label { font-weight: bold; }
 
@@ -27,7 +35,7 @@ textarea,
 h2,
 h3,
 input { float: left; clear: left; margin-top: 0px; margin-bottom: 10px; }
-h2 input { clear: none !important; }
+
 
 textarea,
 input { border: 1px solid #cccccc; }

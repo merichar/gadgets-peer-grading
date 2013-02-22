@@ -22,6 +22,9 @@ class ReviewsController < ApplicationController
         @user.save
       end
     end
+  rescue
+    flash[:error] = "Something went wrong."
+    redirect_to sessions_url
   end
 
   def edit
