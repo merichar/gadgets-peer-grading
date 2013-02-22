@@ -7,12 +7,12 @@
 <h2>Game Name: <%= f.text_field :game %></h2>
 
 <h3>Implementation</h3>
-<%= range_field :review, :implementation_score, :step => "1", :value => "8", :min => "1", :max => "10", :onchange => "$('#iValue').text(this.value)" %><div id="iValue">8</div>
+<%= range_field :review, :implementation_score, :step => "1", :min => "1", :max => "10", :onchange => "$('#iValue').text(this.value)" %><div id="iValue"><%= @review.implementation_score %></div>
 
 <h3>Degree of Difficulty of the project</h3>
-<%= range_field :review, :degree_of_difficulty_score, :step => "1", :value => "8", :min => "1", :max => "10", :onchange => "$('#dValue').text(this.value)" %><div id="dValue">8</div>
+<%= range_field :review, :degree_of_difficulty_score, :step => "1", :min => "1", :max => "10", :onchange => "$('#dValue').text(this.value)" %><div id="dValue"><%= @review.degree_of_difficulty_score %></div>
 <h3>Project 'coolness' and polish</h3>
-<%= range_field :review, :coolness_score, :step => "1", :value => "8", :min => "1", :max => "10", :onchange => "$('#cValue').text(this.value)" %><div id="cValue">8</div>
+<%= range_field :review, :coolness_score, :step => "1", :min => "1", :max => "10", :onchange => "$('#cValue').text(this.value)" %><div id="cValue"><%= @review.coolness_score %></div>
 <h3>Constructive Comments:</h3>
 <%= f.text_area :comments, :rows => "10"  %>
 

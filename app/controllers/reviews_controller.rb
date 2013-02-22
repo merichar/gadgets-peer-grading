@@ -14,7 +14,11 @@ class ReviewsController < ApplicationController
 
     unless @user.reviews.size > 0
       @group.users.each do |u|
-        @user.reviews.build(:presenter => u)
+        @user.reviews.build(:presenter => u,
+                            :implementation_score => 5,
+                            :degree_of_difficulty_score => 5,
+                            :coolness_score => 5 )
+
         @user.save
       end
     end
