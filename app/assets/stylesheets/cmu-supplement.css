@@ -1,0 +1,236 @@
+/* Supplement to the Carnegie Mellon University Basic CSS Template */
+/* Designed for integration with the application templates */
+
+
+/***** Major sections of the general application structure *****/ 
+
+/* The bar that spans the top of each internal site */
+#cmu_bar_box { width: 100%; height: 35px; margin: 0px 0px 0px 0px; 
+	       padding: 0px 0px 0px 0px; }
+#cmu_bar { width: 100%; height: 100%; background-color: #990000;
+	   margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; 
+	   vertical-align: middle; }
+
+/* The account buttons in the top corner of the content area */
+#account_nav_box { width: 99%; margin: 0px 0px 0px 0px; 
+		   padding: 0px 0px 0px 0px; }
+#account_nav { margin: 14px 0px 7px 0px; padding: 0px 0px 0px 0px; 
+	       text-align: right; }
+
+/* The welcome message that appears just below the cmu bar */
+#welcome_heading_box { width: 99%; }
+#welcome_heading { margin: 0px 0px 36px 13px; }
+#welcome_heading_message { padding: 0px 45px 0px 0px; vertical-align: middle;
+			   font-size: 20px; 
+			   font-family: Verdana, Arial, Helvetica, sans-serif; 
+			   font-weight: bold; color: #990000; }
+#welcome_heading_description { margin-top: 14px; }
+
+/* The footer links */
+#footer { text-align: center; font-family: Verdana, Arial, Helvetica, sans-serif; 
+	  font-size: 11px; color: #333333; }
+a.footer { color: #333333; text-decoration: none; text-transform: uppercase; }
+
+
+/***** General application wide classes *****/
+
+/* Any link that needs to appear to be a button... e.g. account_nav */
+.box_button { margin: 0px 0px 0px 3px; padding: 3px 5px 3px 5px;
+              border: 1px; border-color: #d4d4d4; border-style: solid;
+	      font-size: 9px; text-transform: uppercase; text-decoration: none;
+              letter-spacing: 0.5px; }
+a.box_button { text-decoration: none; }
+
+
+
+
+
+.top_links { 
+    margin: 10px 10px 0px 10px; 
+    text-align: right
+ }
+
+
+
+.flash { width: 99%; font-weight: bold;
+	 font-size: 12pt; text-align: center !important }
+.flash.error { border: 1px solid #ee0000; background-color: #ffeeee; color: #ee0000; padding: 20px; }
+.flash.notice { border: 1px solid #009900; color: #009900; background-color: #eeffee; padding: 20px; }
+
+#content_box { width: 99%; margin-bottom: 10px; }
+#content { margin-left: 10px }
+.right_links { margin: 10px 0px 0px 10px; text-align: right; }
+
+
+
+
+/*****
+ ** Lists
+ **/
+/*li { margin-left: 10px; }*/
+
+#no_style_list {  
+  list-style: none;
+  list-style-image: none;
+  padding: 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+#no_style_list .even { 
+  padding: 5px;
+  margin: 2px 0px 2px 0px;
+  background-color: #cccccc;
+}
+
+#no_style_list .odd { 
+  padding: 5px;
+  margin: 2px 0px 2px 0px;
+  list-style-type: none;
+}
+
+.governing_document {
+  list-style-type: upper-roman
+}
+
+/* alternate div coloring */
+.odd {   
+  padding: 3px; 
+}
+.even {
+  padding: 3px; 
+  background-color: #cccccc; 
+}
+
+/*****
+ ** Section Padding
+ */
+
+.section {  
+  margin-bottom: 40px;
+}
+
+.sub_section {  
+  margin-bottom: 25px;
+}
+
+
+/*****
+ ** Flash notices
+ **/
+
+.flash {  
+  text-align: right; 
+  font-weight: bold;
+  color: #936241; 
+  font-size: 13pt; 
+  padding: 7px; 
+} 
+/*****
+ ** Spacer
+ */
+#spacer {
+  border-bottom: 1px solid #cccccc; 
+  width: 100%; 
+  clear: left;
+  margin: 0px 0px;
+}
+
+/*****
+ ** Form Properties
+ **/
+
+/* fields that should be indented for clarity */
+.indented_fields { 
+  margin-left: 50px;
+}
+
+.both_sides_indented_fields { 
+  margin: 0px 50px;
+}
+
+/* used with indented fields to create a space
+   where directions would normally go */
+.no_directions {
+  margin-top: 20px;
+}
+
+/* for all form submit buttons */
+#submit_button { 
+  text-align: center;
+}
+
+/* used by error_message_on */
+.formError {  
+  padding: 0px; 
+  color: #ee2222; 
+  font-weight: bold; 
+  display: inline; 
+} 
+ 
+/* created around a form's field that returned an error */
+.fieldWithErrors {   
+  border: 1px solid red; 
+}
+
+/* symbols typically showing what's required and what's not */
+.form_symbols {
+  text-align: right; 
+  font-size: 7pt; 
+  margin: 5px 10px 5px 5px;
+  color: #888888;
+}
+/* what type of input is expected for a field in the form */
+.field_directions {   
+  margin-bottom: 10px;
+}
+
+/* the title of the field in the form */
+.field_title {
+  font-weight: bold;
+}
+
+/* an example within a form showing possible valid user input */
+.form_example {   
+  color: #888888; 
+  margin-left: 5px; 
+}
+
+/* the style for a message indicating there are no options/items
+   to render (intead of it looking like a rendering error) */
+.empty_field { 
+  color: #888888;
+  font-style: italic;
+}
+
+/* this serves double duty by padding out the label for an input as well
+   as floating it to make the label keep position when a div class=formError 
+   gets wrapped around it */
+.input_section { 
+  clear: left; 
+  float: left; 
+  margin-right: 10px
+}
+
+/* label padding is the distance between the label and an input section */
+.label_padding { 
+  margin: 10px
+}
+/* typically for a form_example or field direction that should
+   be right aligned instead of the default */
+.right { 
+  text-align: right;
+  margin-right: 0px;
+}
+
+/* typically for a form_example or field direction that should
+   be clear left aligned instead of the default */
+.left { 
+  text-align: left;
+  margin-left: 0px;
+}
+
+/* typically for a form_example or field direction that should
+   be clear left aligned instead of the default */ 
+.center {
+  text-align: center;
+}

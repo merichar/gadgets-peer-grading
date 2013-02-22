@@ -54,9 +54,14 @@ GEM
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
+    jquery-datatables-rails (1.11.2)
+      jquery-rails
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (3.0.1)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.7.7)
     levenshtein (0.2.2)
     locale (2.0.8)
@@ -119,7 +124,9 @@ PLATFORMS
 DEPENDENCIES
   activeldap
   coffee-rails (~> 3.2.1)
+  jquery-datatables-rails
   jquery-rails
+  jquery-ui-rails
   mysql2
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)

@@ -9,5 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
- */
+ *= require reset
+ *= require fonts
+ *= require dataTables/jquery.dataTables.bootstrap
+ *= require cmu
+ *= require cmu-supplement
+ *= require tables
+ *= require scaffolds
+ *= require sessions
+
+*/

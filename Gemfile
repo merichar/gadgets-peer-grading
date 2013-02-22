@@ -21,6 +21,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails'
+
 gem 'activeldap', :require => 'active_ldap/railtie'
 
 # To use ActiveModel has_secure_password

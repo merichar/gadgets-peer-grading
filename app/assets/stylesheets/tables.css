@@ -1,0 +1,88 @@
+
+TH {font-weight: bold }
+
+table,
+.epi-dataTable,
+.wsui-table,
+.portlet-table-body {border-bottom: #FFFFFF 1px solid;
+                     border-left: #FFFFFF 1px solid;
+                     border-right: #FFFFFF 0px solid }
+table th,
+.epi-dataTable TH,
+.wsui-table TH,
+.portlet-table-header TH,
+.portlet-table-header TD {color: #464646;
+                          background-color: #DBDEDE;
+                          border-top: #FFFFFF 1px solid;
+                          border-right: #FFFFFF 1px solid;
+                          padding: .5em }
+table th a,
+.epi-dataTable TH a,
+.wsui-table TH a,
+.portlet-table-header a {color: #464646 !important;
+                         text-decoration: none }
+
+.epi-dataTable TH.epi-rowHeadSorted,
+.epi-dataTable TH.epi-rowHeadSorted a {color: #464646 !important;
+                                       background-color: #DBDEDE;
+                                       text-decoration: none }
+
+.epi-dataTable TD,
+.wsui-table TD,
+.portlet-table-body TD {border-top: #FFFFFF 1px solid;
+                        border-right: #FFFFFF 1px solid;
+                        padding-top: .3em;
+                        padding-bottom: .3em;
+                        padding-left: .5em;
+                        padding-right: .5em }
+
+.epi-dataTable .epi-padRight {padding-right: 2em }
+
+/* SHARED BACKGROUND COLORS */
+.odd,
+.wsui-table-row-odd,
+.portlet-table-body {background-color: #F4F4F4 }
+
+.even,
+.wsui-table-row-even,
+.portlet-table-alternate {background-color: #FFFFFF }
+
+.epi-rowSpecial1,
+.wsui-table-row-sectionheader,
+.portlet-table-subheader {color: #990000;
+                          background-color: #FFFFFF }
+
+.epi-rowFooter,
+.portlet-table-footer {color: #464646;
+                       background-color: #FFFFFF }
+
+.epi-rowHighlight,
+.epi-rowHighlight td,
+.epi-rowHighlight td a,
+.portlet-table-selected,
+.portlet-table-selected a {color: #464646 !important;
+                           background-color: #FFFF99 }
+
+.epi-dataTableBorder {background-color: #FFFFFF }
+
+/* EPI-ROWHEAD: used only to simulate the effect of a data table's header row; not necessary if using <th> */
+.epi-rowHead,
+.wsui-table-row-header {color: #464646;
+                        font-weight: bold;
+                        background-color: #DBDEDE;
+                        padding-top: .3em;
+                        padding-bottom: .3em }
+
+.epi-rowHead a,
+.wsui-table-row-header a {color: #464646 !important;
+                          text-decoration: none }
+
+.epi-rowHeadSorted {color: #464646;
+                    font-weight: bold;
+                    background-color: #DBDEDE;
+                    padding-top: .3em;
+                    padding-bottom: .3em }
+
+.epi-rowHeadSorted a {color: #464646 !important;
+                      text-decoration: none }
+

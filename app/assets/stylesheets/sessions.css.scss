@@ -1,3 +1,16 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#login { width: 200px; 
+         float: left;
+	 padding-right: 50px;
+	 border-right: 1px solid #cccccc;
+       }
+
+#register { float: left; margin-left: 50px; width: 200px; }
+
+input[type="submit"] { clear: left; float: left; margin: 20px; }
+input[type="text"] { margin-bottom: 10px; }
+
+label { font-weight: bold; }
+
+h3 { font-weight: bold; margin-top: 30px; }
+
+#review_list input { float: left; clear: left; }
